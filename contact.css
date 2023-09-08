@@ -1,10 +1,12 @@
-* {
+/* Global Styles */
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+    background-color: black;
+    color: white;
+    text-align: center;
 }
-
-/* Nav */
 
 .nav-overlay {
     position: absolute;
@@ -21,6 +23,7 @@ nav {
     min-height: 8vh;
     background-color: rgb(0, 0, 0, 0.8);
     font-family: "Roboto Mono", monospace;
+    margin-bottom: 100px;
 }
 
 .logo {
@@ -168,84 +171,140 @@ nav {
 
 /* End of Nav */
 
-/* Main */
-
-main {
+/* Contact Page Styles */
+.contact-container {
+    position: absolute;
+    width: 100%;
     height: 100vh;
-    background-color: black;
+    overflow: hidden;
 }
 
 .background-img {
-    background-image: url('/images/forest1.jpg');
-    filter: blur(8px);
-    -webkit-filter: blur(8px);
+    background-image: url('/images/forest2.jpg');
+    position: absolute;
     height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
+    width: 100%;
     background-size: cover;
+    background-position: center;
+    filter: blur(5px);
+    z-index: -1;
 }
 
-.overlay {
+.contact-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.contact-form {
+    margin-top: 100px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    width: 60%;
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-color: rgb(0, 0, 0, 0.8);
-    color: white;
-    font-weight: bold;
-    font-family: 'Roboto Mono', monospace;
-    border: 5px solid #f1f1f1;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 0;
-    max-width: 60%;
+    max-width: 40%;
     padding: 20px;
     text-align: center;
+    overflow: hidden;
 }
 
-
-.overlay h1 {
+.contact-form h1 {
     font-size: 40px;
     text-transform: uppercase;
     letter-spacing: 10px;
-
+    margin-top: 0;
+    margin-bottom: 20px;
 }
 
-.overlay p {
+h1 {
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    margin-top: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    width: 80%;
+}
+
+label {
     font-size: 20px;
-    margin: 20px 0;
+    margin-top: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    font-size: 16px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+textarea {
+    height: 150px;
+}
+
+input[type="submit"] {
+    width: 150px;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
 }
 
 @media screen and (max-width: 768px) {
-    .overlay {
+    .contact-form {
         max-width: 80%;
     }
 
-    .overlay h1 {
+    .contact-form h1 {
         font-size: 30px;
     }
 
-    .overlay p {
+    .contact-form p {
         font-size: 16px;
     }
-
 }
-
+    
 @media screen and (max-width: 500px) {
-    .overlay {
+    .contact-form {
         max-width: 100%;
     }
 
-    .overlay h1 {
+    .contact-form h1 {
         font-size: 20px;
     }
 
-    .overlay p {
-        font-size: 12px;
+    .contact-form p {
+        font-size: 16px;
     }
-
 }
+    
 
-
-/* End of Main */

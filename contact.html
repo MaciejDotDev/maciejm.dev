@@ -4,10 +4,10 @@
 <head>
     <!--KALAM WOZ HERE-->
     <meta charset="UTF-8">
-    <meta name="description" content="Maciej Majorczyk's personal site">
+    <meta name="description" content="Maciej Majorczyk's personal site's contact page">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link href="style.css" rel="stylesheet" type="text/css">
+    <title>Contact</title>
+    <link href="contact.css" rel="stylesheet" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -24,8 +24,8 @@
             </div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="https://www.linkedin.com/in/maciej-majorczyk-a10188195/">Socials</a></li>
-                <li><a href="https://github.com/MaciejDotDev">Projects</a></li>
+                <li><a href="index.html">Socials</a></li>
+                <li><a href="index.html">Projects</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
             <div class="burger">
@@ -34,20 +34,23 @@
                 <div class="line3"></div>
         </nav>
     </div>
-
-    
-
-    <main>
+    <div class="contact-container">
         <div class="background-img"></div>
-        <div class="overlay">
-            <h1>Innovative</h1>
-            <h1>Efficient</h1>
-            <h1>Scalable</h1>
-            <p>Hi, I'm Maciej and I look forward to working with you!</p>
-        </div>
+        <div class="contact-form">
+            <h1>Contact Me</h1>
+            <form action="mailto:mmaciej610@gmail.com" method="post" enctype="text/plain">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
 
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <input type="submit" value="Send">
+            </form>
         </div>
-    </main>
 </body>
 <script src="app.js"></script>
 

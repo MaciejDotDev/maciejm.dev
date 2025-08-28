@@ -85,7 +85,7 @@ export default function FlowBackground() {
       height: '100vh',
       zIndex: 0,
       filter: 'blur(0.2px)',
-      pointerEvents: 'none',   // ✅ add this line
+      pointerEvents: 'none',  
     }}
     aria-hidden
   />

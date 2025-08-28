@@ -166,7 +166,7 @@ body {
   line-height: 1.6;
 }
 
-/* Sections */
+/* ==== Sections ==== */
 .about-section {
   display: grid;
   gap: 12px;
@@ -175,7 +175,7 @@ body {
   margin: 8px 0 0;
 }
 
-/* Cards ( */
+/* ==== Cards ==== */
 .cards {
   display: grid;
   gap: 12px;
@@ -212,7 +212,7 @@ body {
   font-size: 12px;
 }
 
-/* Gallery */
+/* ==== Gallery for About Section ==== */
 .gallery {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -237,7 +237,7 @@ body {
   color: var(--fg-dim);
 }
 
-/* Mobile tweaks */
+/* ==== Mobile tweaks ==== */
 @media (max-width: 720px) {
   .about-hero {
     grid-template-columns: 80px 1fr;
@@ -253,7 +253,6 @@ body {
     .stage { padding-bottom: 72px; }
 }
 
-/* Themed link styles */
 a {
 color: var(--accent);
 text-decoration: none;
@@ -268,7 +267,7 @@ color: var(--fg);
 }
 
 
-/* Scrollbar styling */
+/* ==== Scrollbar styling ==== */
 ::-webkit-scrollbar {
 width: 10px;
 height: 10px;
@@ -287,7 +286,7 @@ background: linear-gradient(180deg, var(--accent2), var(--accent));
 }
 
 
-/* Firefox */
+/* ==== Firefox ==== */
 * {
 scrollbar-width: thin;
 scrollbar-color: var(--accent) rgba(12,16,36,0.4);

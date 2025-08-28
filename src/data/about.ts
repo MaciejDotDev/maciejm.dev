@@ -1,4 +1,4 @@
-export const aboutBlurb = `I’m Maciej, a full-stack developer and freelance coder. I'm a Jack of All Trades from programming to Building hardware. Lets interract.`
+export const aboutBlurb = `I’m Maciej, a full-stack developer and freelance coder. I'm a Jack of All Trades from programming to Building hardware. Lets interact.`
 
 export type Project = {
   title: string

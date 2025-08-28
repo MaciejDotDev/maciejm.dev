@@ -1,0 +1,17 @@
+export const skills = [
+  'C# / .NET / EF',
+  'Razor Pages',
+  'JavaScript / TypeScript',
+  'React',
+  'SQL (SQL Server, MySQL)',
+  'Shopify / Liquid',
+  'RESTful APIs',        
+  'Java',
+  'MVC Architecture',
+  'Entity Framework / LINQ',
+  'Dependency Injection',
+  'Git / GitHub',
+  'Vite / Webpack',
+  'Framer Motion',
+  'Canvas / Web Audio',
+]

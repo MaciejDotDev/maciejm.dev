@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@types/howler": "^2.2.12",
+    "framer-motion": "^12.23.12",
+    "howler": "^2.2.4"
+  }
+}

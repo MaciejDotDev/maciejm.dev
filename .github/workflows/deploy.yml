@@ -1,5 +1,4 @@
 name: Deploy Vite site to GitHub Pages
-
 on:
   push:
     branches: [ main ]
@@ -17,29 +16,29 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20, cache: npm }
+      - run: npm ci
+      - run: npm run build
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: npm
+      # ✅ SPA fallback
+      - run: cp dist/index.html dist/404.html
 
-      - name: Install dependencies
-        run: npm ci
+      # ✅ DEBUG: show what's actually in dist/
+      - name: Show dist tree
+        run: |
+          echo "---- DIST TREE ----"
+          find dist -maxdepth 2 -type f | sort
 
-      - name: Build
-        run: npm run build
+      # ✅ DEBUG: print the first lines of dist/index.html
+      - name: Show dist/index.html head
+        run: |
+          echo "---- INDEX HEAD ----"
+          head -n 50 dist/index.html
 
-      # SPA fallback 
-      - name: Create 404.html for SPA
-        run: cp dist/index.html dist/404.html
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: dist
+      - uses: actions/upload-pages-artifact@v3
+        with: { path: dist }
 
   deploy:
     runs-on: ubuntu-latest

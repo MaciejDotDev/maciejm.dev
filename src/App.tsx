@@ -92,7 +92,7 @@ export default function App() {
         </section>
       </main>
 
-      <footer className="foot">Use ← → to move • Enter to select</footer>
+      <footer className="foot">Use ← → to move • Volume Up </footer>
     </div>
   )
 }
